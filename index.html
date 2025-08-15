@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Praxis Ildo Fisch – Naturheilkunde & Osteopathie · Triesenberg</title>
+  <meta name="description" content="Praxis für Naturheilkunde und manuelle Verfahren in Triesenberg. Osteopathie, manuelle Therapie, Komplementärmedizin. Terminvereinbarung per Telefon.">
+  <meta name="author" content="Ildo Fisch">
+  <meta name="theme-color" content="#8fae2b">
+
+  <meta property="og:title" content="Praxis Ildo Fisch – Naturheilkunde & Osteopathie">
+  <meta property="og:description" content="Ganzheitliche Behandlung in Triesenberg.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/hero-background.jpg">
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Raleway:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    /* Utility: sichere, sanfte max-Breiten für Seitenelemente */
+    .figure--side-small img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+
+    /* --- INDICATIONS LAYOUT (natur2.jpg links auf Höhe „Mögliche Indikationen…“) --- */
+    .indikation-layout {
+      display: block;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    @media (min-width: 900px) {
+      .indikation-layout {
+        display: grid;
+        grid-template-columns: minmax(220px, 420px) 1fr;
+        align-items: start;
+        gap: clamp(1.25rem, 3vw, 2.5rem);
+        position: relative;
+      }
+    }
+
+    .indikation-layout .indikation-aside {
+    }
+
+    .indikation-aside .figure {
+      margin: 0;
+    }
+
+    .indikation-aside .figure img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 12px;
+      object-fit: cover;
+      box-shadow: 0 10px 30px rgba(0,0,0,.08);
+    }
+
+    @media (min-width: 1024px) {
+      .indikation-aside {
+        position: sticky;
+        top: 96px;
+      }
+    }
+
+    .indikation-main {
+    }
+
+    .indikation-main .subhead {
+      scroll-margin-top: 96px;
+    }
+
+    .indication-blocks {
+      margin-top: 1rem;
+      row-gap: clamp(0.75rem, 1.5vw, 1.25rem);
+      column-gap: clamp(0.75rem, 1.5vw, 1.25rem);
+    }
+
+    #philosophie .image-col .figure--soft:first-of-type img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+      border-radius: 16px;
+    }
+
+    @media (min-width: 1100px) {
+      #philosophie .grid--side {
+        grid-template-columns: 1.15fr 1fr;
+      }
+    }
+
+    .philo-hero {
+      aspect-ratio: 16 / 10;
+      overflow: hidden;
+      border-radius: 18px;
+    }
+
+    .philo-hero > img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      object-position: center;
+      filter: none;
+    }
+
+    #philosophie .image-col .figure--soft:nth-of-type(2) img {
+      border-radius: 12px;
+      opacity: 0.96;
+    }
+
+    #philosophie .image-col .figure--soft + .figure--soft {
+      margin-top: clamp(0.75rem, 1.5vw, 1.25rem);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .animate-fade-in,
+      .animate-slide-right {
+        animation: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+      }
+    }
+
+    .indikation-aside .figure img {
+      max-height: 640px;
+    }
+
+    @media (min-width: 900px) and (max-width: 1199px) {
+      .indikation-aside .figure img {
+        max-height: 520px;
+      }
+    }
+
+    @media (max-width: 899px) {
+      .indikation-aside {
+        margin-bottom: 1.25rem;
+      }
+    }
+
+    .indikation-main .cta-row {
+      margin-top: clamp(1rem, 2vw, 1.5rem);
+    }
+  </style>
+
+  <link rel="icon" href="data:,">
+</head>
+
+<body>
+  <a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
+
+  <header id="home" class="hero-section" aria-label="Einstieg">
+    <picture>
+      <source srcset="images/hero-background.jpg" media="(min-width: 600px)">
+      <img class="hero-bg" src="images/hero-background.jpg" alt="Natürlicher Hintergrund" decoding="async">
+    </picture>
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content animate-fade-in delay-1">
+      <h1 class="hero-title">
+	<h1 style="color: white;">Praxis für Naturheilkunde<br>und manuelle Verfahren</h1>
+      </h1>
+      <p class="hero-subtitle">
+        Ildo Fisch – Ihr Experte für ganzheitliche Gesundheit
+      </p>
+
+      <div class="hero-ctas" data-stagger>
+        <a class="btn-primary" href="#leistungen" aria-label="Zu Meine Arbeit">Mehr über die Arbeit</a>
+        <a class="btn-outline" href="#kontakt" aria-label="Kontakt aufnehmen">Termin anfragen</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="inhalt" tabindex="-1">
+    <section id="leistungen" class="section section--tight" aria-label="Meine Arbeit">
+      <div class="container">
+        <div class="grid grid--side">
+          <div class="image-col">
+            <figure class="figure figure--shadow">
+              <img class="animate-fade-in" src="images/behandlung.jpg" alt="Behandlung in der Praxis" />
+            </figure>
+          </div>
+
+          <div class="text-col animate-slide-right delay-2">
+            <h2 class="section-title">Meine Arbeit</h2>
+
+            <p>
+              Seit meiner therapeutischen Erstausbildung zum Med. Masseur nehme ich laufend an Aus- und Weiterbildungen teil. Die umfangreichste und kompletteste Ausbildung im Anschluss war die Osteopathie, nach der ich die Ausbildung zum dipl. Naturheilpraktiker TEN durchlief.
+            </p>
+
+            <p>
+              Meine breite komplementärtherapeutische Ausbildung (siehe Rubrik „Curriculum vitae“) ermöglicht es mir, verschiedenste – insbesondere funktionelle – Beschwerden differenziert zu betrachten und effizient zu behandeln.
+            </p>
+
+            <p>
+              Nach einer gezielten Anamnese und ausführlicher Untersuchung arbeite ich über das muskuläre, bindegewebige und knöcherne System des Körpers. Dabei wende ich verschiedene manuelle Ansätze an, mit denen sich nahezu alle Gewebe des Körpers behandeln lassen:
+            </p>
+		<ul class="list list--bullet" data-stagger>
+ 		 <li>Betreuung und Begleitung mit Phytotherapeutika</li>
+ 		 <li>Muskel- und Faszientechniken</li>
+ 		 <li>Gelenktechniken für Becken, Wirbelsäule, Rippen, Extremitäten, Kiefer</li>
+ 		 <li>Organbehandlung</li>
+		 <li>Cranio-sacrale Techniken</li>
+		 <li>Techniken für das Gefäss- und Lymphsystem</li>
+		 <li>Techniken für das zentrale und vegetative Nervensystem</li>
+		 <li>Spezifische Techniken für Babys und Kleinkinder</li>
+		</ul>
+
+
+            <p class="note">
+              Trotz meiner vertieften Ausbildung in Anatomie, Physiologie, Biomechanik und Pathologie ersetzt meine Behandlung keine ärztliche Behandlung und Diagnostik. Beschwerden oder Erkrankungen, die schulmedizinisch behandelt werden müssen, können oft begleitend mit Komplementärtherapie behandelt werden.
+            </p>
+     	</section>
+<section id="indikationen" class="section" aria-label="Mögliche Indikationen">
+  <div class="container">
+    <header class="section-head">
+      <h2 class="section-title animate-slide-right delay-1" style="text-align: center;">
+  Mögliche Indikationen sich bei mir zu melden:
+</h2>
+
+    </header>
+
+    <div class="grid grid--side">
+      
+      <!-- Linke Spalte mit zwei Bildern -->
+      <div class="image-col">
+        <figure class="figure figure--soft" style="border-radius: 16px; overflow: hidden; margin-bottom: 1cm;">
+          <img class="animate-fade-in" src="images/natur4.jpg" alt="Naturmotiv oben" style="width: 100%; height: auto; display: block; object-fit: cover;">
+        </figure>
+
+        <figure class="figure figure--soft" style="border-radius: 16px; overflow: hidden;">
+          <img class="animate-fade-in delay-1" src="images/natur3.jpg" alt="Naturmotiv unten" style="width: 100%; height: auto; display: block; object-fit: cover;">
+        </figure>
+      </div>
+
+      <!-- Rechte Spalte mit Indikations-Text -->
+      <div class="text-col animate-slide-right delay-2">
+        <div class="indication-blocks">
+
+          <article class="indication">
+            <h4>Im internistischen Bereich</h4>
+            <p>Sodbrennen, Verdauungsstörungen, Reizdarm, Organsenkungen, Operationsfolgen u. a.</p>
+          </article>
+
+          <article class="indication">
+            <h4>Im Bereich des Bewegungsapparates</h4>
+            <p>Ischias, Lumbago, Hexenschuss, Beschwerden in allen Gelenken (Fuss, Knie, ...), Schleudertraumen u. a.</p>
+          </article>
+
+          <article class="indication">
+            <h4>Im Hals-Nasen-Ohren-Bereich</h4>
+            <p>Chronisch wiederkehrende Entzündungen, Schwindel, Tinnitus, Hörsturz u. a.</p>
+          </article>
+
+          <article class="indication">
+            <h4>Zahn-/Kieferprobleme</h4>
+            <p>Wenn möglich in Begleitung einer fachärztlichen Behandlung: Kreuzbiss, Zahnstellungskorrekturen, Kiefergelenksprobleme u. a.</p>
+          </article>
+
+          <article class="indication">
+            <h4>Urogenital</h4>
+            <p>Chronische Blasen- und/oder Nierenentzündungen, Menstruationsbeschwerden, Endometriose, Prostatabeschwerden, Inkontinenz u. a.</p>
+          </article>
+
+          <article class="indication">
+            <h4>Kinderheilkunde</h4>
+            <p>Schädel- oder Gesichtsverformungen, Schiefhals, Verdauungsstörungen, Blähungen, „Spuckkinder“, Schlafstörungen, Lern- und Konzentrationsstörungen, Sprachstörungen u. a.</p>
+          </article>
+
+          <article class="indication">
+            <h4>Schwangerschaft</h4>
+            <p>Sodbrennen, Übelkeit, Ischias, Steisslage des Babys, Geburtsvorbereitung u. a.</p>
+          </article>
+
+          <article class="indication">
+            <h4>Kopfbereich</h4>
+            <p>Wenn möglich in Begleitung einer fachärztlichen Behandlung: Kopfschmerzen, Migräne, Neuralgien, Sehbeschwerden u. a.</p>
+          </article>
+
+        </div>
+	<div class="cta-row" data-stagger style="margin-top: 0.5cm;">
+  	<a class="btn-primary" href="#kontakt">Kontakt aufnehmen</a>
+ 	 <a class="btn-link" href="#tarife">Zu den Tarifen</a>
+	</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="philosophie" class="section section--alt" aria-label="Philosophie">
+  <div class="container">
+    <div class="grid grid--side grid--reverse">
+      <div class="image-col">
+        <figure class="figure figure--soft philo-hero" aria-label="Großes Naturmotiv als Ruhepol">
+          <img class="animate-fade-in" src="images/natur.jpg" alt="Naturmotiv als Ruhepol, groß und ruhig inszeniert" />
+        </figure>
+        <figure class="figure figure--soft" aria-label="Zweites Naturmotiv dezent ergänzt">
+          <img class="animate-fade-in delay-2" src="images/natur2.jpg" alt="Zweites Naturmotiv als zusätzlicher Ruhepol" />
+        </figure>
+      </div>
+
+      <div class="text-col animate-slide-right delay-2">
+        <h2 class="section-title">Die Kraft der Natur</h2>
+        <p>
+          Die Natur bietet uns alles, was wir für Heilung und Wohlbefinden brauchen. In meiner Praxis nutze ich natürliche Heilmittel und sanfte manuelle Techniken, um Körper und Geist in Einklang zu bringen. Der Fokus liegt immer auf dem Menschen als Ganzes.
+        </p>
+
+        <ul class="list list--check" data-stagger>
+          <li>Ganzheitliche Betrachtung</li>
+          <li>Ursachenorientiertes Arbeiten</li>
+          <li>Nachhaltige Unterstützung</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="vita" class="section" aria-label="Curriculum Vitae">
+  <div class="container">
+    <header class="section-head">
+      <h2 class="section-title animate-slide-right delay-2">Curriculum Vitae</h2>
+    </header>
+
+    <div class="grid grid--side">
+      <div class="image-col">
+        <figure class="portrait figure figure--round">
+          <img class="animate-fade-in" src="images/portrait-ildo.jpg" alt="Portrait von Ildo Fisch">
+        </figure>
+      </div>
+
+      <div class="text-col animate-slide-right delay-3">
+        <div class="vita-meta">
+          <p><strong>Name:</strong> Fisch</p>
+          <p><strong>Vorname:</strong> Ildo</p>
+          <p><strong>Geboren:</strong> 14. November 1975</p>
+          <p><strong>Heimatort:</strong> Herisau/AR</p>
+        </div>
+
+        <h3 class="subhead">Ausbildungen</h3>
+        <ul class="list list--bullet" data-stagger>
+          <li>2013–2015 · Ausbildung zum dipl. Naturheilpraktiker TEN an der Paramed, Baar (2 1/2-jähriges berufsbegleitendes Studium)</li>
+          <li>2003–2008 · Ausbildung zum dipl. Osteopath am College Sutherland, Ulm (DE) – 5-jähriges berufsbegleitendes Studium</li>
+          <li>1998–2001 · Ausbildung zum Med. Masseur FA SRK, St. Gallen – 3-jährige Vollzeitausbildung</li>
+          <li>1994 · Abschluss der kaufmännischen Ausbildung, Bern</li>
+        </ul>
+        <h3 class="subhead">Weiterbildungen</h3>
+        <ul class="list list--bullet" data-stagger>
+          <li>2017–2019 · Kursorganisation und Assistenz der Kursreihe „Grow Your Skills“ mit Tim Marris DO MSSC</li>
+          <li>2014–2017 · Kursorganisation und Teilnahme an „Grow Your Skills“ mit Tim Marris DO MSSC</li>
+          <li>2013 · „Trust Your Hands“ bei Tim Marris in Hamburg</li>
+          <li>2013 · Grundkurs Craniosacral-Movement, Rudolf Merkel, Zürich</li>
+          <li>2012 · Ausbildung in „Osteopathy in the Cranial Field“, SCC in der Proitzer Mühle (Deutschland)</li>
+          <li>2010–2012 · Ausbildung in qualitativer viszeraler Osteopathie bei Jürg Gschwend und Thomas Hirth, Zürich</li>
+          <li>2009–2011 · Osteopathie in der Pädiatrie 1–4, Kurszyklus bei Eva Möckel und Noori Mitha, Hamburg</li>
+          <li>2009 · Ausbildung in den peripheren Techniken nach Dr. Sutherland, SCC, Proitzer Mühle (Deutschland)</li>
+          <li>2001–2002 · Ausbildung „Viscerale Manipulation“ an der Dr. Vodder Schule, Walchsee/Tirol (Österreich)</li>
+        </ul>
+
+        <h3 class="subhead">Berufliches Curriculum Vitae</h3>
+        <p>
+          Nach Abschluss meiner therapeutischen Grundausbildung in St. Gallen habe ich eine Stelle als Med. Masseur in Lausanne angetreten. Ich war 17 Monate in Renens in der Physiotherapie et Reeducation DINO angestellt. Im Oktober 2002 habe ich die Leitung der Physikalischen Therapie des Medizinischen Zentrums in Bad Ragaz übernommen. Seit September 2007 bin ich mit Andreas Schmid in unserer Praxis BEWEGGRUND. in Chur tätig. Zusätzlich engagierte ich mich von Anfang 2007 bis Ende August 2011 als freier Mitarbeiter in der Osteopathiepraxis von M. van Geffen (Liechtenstein). Ab September 2011 war ich vollumfänglich in meiner Praxis in Chur tätig. Im September 2016 eröffnete ich eine Praxis in Triesenberg (Liechtenstein).
+        </p>
+
+        <div class="cta-row">
+          <a class="btn-link" href="#tarife">Zu den Tarifen</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="tarife" class="section section--alt" aria-label="Krankenkasse und Tarife">
+  <div class="container">
+    <header class="section-head">
+      <h2 class="section-title animate-slide-right delay-1">Krankenkasse &amp; Tarife</h2>
+    </header>
+
+    <div class="grid grid--side">
+      <div class="image-col">
+        <figure class="figure figure--soft">
+          <img class="animate-fade-in" src="images/natur.jpg" alt="Blick in die Praxis">
+        </figure>
+      </div>
+
+      <div class="text-col animate-slide-right delay-2">
+        <p>
+          Die Kosten meiner Behandlung werden, im Rahmen Ihrer Zusatzversicherung (VVG), von Ihrer Krankenkasse mitgetragen. Hierzu benötigen Sie eine Zusatzversicherung, die eine Kostenübernahme bei „Alternativ- oder Komplementärmedizin“ beinhaltet. Sie brauchen keine Verordnung oder Überweisung. Bezüglich Kostendeckung bitte ich Sie um Rücksprache mit Ihrer Krankenkasse. In der Regel handelt es sich um eine Übernahme von ca. 75%.
+        </p>
+
+        <h3 class="subhead">Tarife</h3>
+        <ul class="price-list list--check" data-stagger>
+          <li>Behandlung à 60 Minuten: sFr. 150.—</li>
+          <li>Behandlung à 45 Minuten: sFr. 120.—</li>
+          <li>Behandlung à 30 Minuten: sFr.&nbsp;&nbsp;90.—</li>
+        </ul>
+
+        <p class="note">Auch bei Fragen zu den Tarifen stehe ich Ihnen gerne telefonisch oder per E-Mail zur Verfügung.</p>
+
+        <div class="cta-row">
+          <a class="btn-primary" href="#kontakt">Kontakt & Termin</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="anfahrt" class="section" aria-label="Hier finden Sie mich">
+  <div class="container">
+    <header class="section-head">
+      <h2 class="section-title animate-slide-right delay-2">Hier finden Sie mich</h2>
+      <p class="animate-slide-right delay-3">Bergstrasse 3 · FL-9497 Triesenberg</p>
+    </header>
+
+    <div class="map-wrap animate-fade-in">
+      <iframe
+        title="Google Maps – Bergstrasse 3, Triesenberg"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2715.0094807234705!2d9.541219777227138!3d47.11848567114921!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479b3408c9e60095%3A0x1cfb847e4d477ef7!2sBergstrasse%203%2C%209497%20Triesenberg!5e0!3m2!1sde!2sli!4v1755209803979!5m2!1sde!2sli"
+        width="100%"
+        height="450"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<section id="kontakt" class="section section--alt" aria-label="Kontakt">
+  <div class="container">
+    <header class="section-head">
+      <h2 class="section-title animate-slide-right delay-1">Nehmen Sie mit mir Kontakt auf</h2>
+      <p class="animate-slide-right delay-2">Terminliche Anfragen bitte nur per Telefon. Danke!</p>
+    </header>
+
+    <div class="grid grid--side">
+      <div class="image-col">
+        <figure class="figure figure--shadow">
+          <img class="animate-fade-in" src="images/kontakt.jpg" alt="Kontaktaufnahme">
+        </figure>
+      </div>
+
+      <div class="text-col">
+        <address class="kontakt-addr animate-slide-right delay-2">
+          <strong>Praxis für Naturheilkunde und manuelle Verfahren</strong><br>
+          Ildo Fisch<br>
+          Bergstrasse 3<br>
+          FL-9497 Triesenberg<br>
+          Telefon: <a href="tel:+4233901112">00423 390 11 12</a><br>
+          E-Mail: <a href="mailto:ildo.fisch@beweggrund.li">ildo.fisch@beweggrund.li</a>
+        </address>
+
+        <form class="kontakt-form animate-slide-right delay-3" aria-label="Kontaktformular">
+          <div class="form-row">
+            <div class="form-field">
+              <label for="f-name">Name*</label>
+              <input id="f-name" type="text" name="name" required autocomplete="family-name" placeholder="Nachname">
+            </div>
+            <div class="form-field">
+              <label for="f-vorname">Vorname*</label>
+              <input id="f-vorname" type="text" name="vorname" required autocomplete="given-name" placeholder="Vorname">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label for="f-email">E-Mail*</label>
+              <input id="f-email" type="email" name="email" required autocomplete="email" placeholder="name@beispiel.li">
+            </div>
+            <div class="form-field">
+              <label for="f-termin">Wunschtermin (optional)</label>
+              <input id="f-termin" type="datetime-local" name="termin">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field form-field--full">
+              <label for="f-msg">Nachricht*</label>
+              <textarea id="f-msg" name="nachricht" rows="6" required placeholder="Ihre Nachricht..."></textarea>
+            </div>
+          </div>
+
+          <p class="form-hint">* Bitte alle erforderlichen Felder ausfüllen.</p>
+
+          <div class="form-actions" data-stagger>
+            <button class="btn-primary" type="submit">Nachricht senden</button>
+            <a class="btn-outline" href="tel:+4233901112">Lieber anrufen</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="links" class="section" aria-label="Links und Hinweise">
+  <div class="container">
+    <header class="section-head">
+      <h2 class="section-title animate-slide-right delay-1">Links (wie rechts...)</h2>
+    </header>
+
+    <div class="links-grid animate-slide-right delay-2">
+      <div class="links-col">
+        <h3>Meine Ausbildungsorte</h3>
+        <ul class="list list--links">
+          <li><a href="https://www.paramed.ch">paramed.ch</a></li>
+          <li><a href="https://www.college-sutherland.de">college-sutherland.de</a></li>
+          <li><a href="https://www.sgmf.ch">sgmf.ch</a></li>
+        </ul>
+
+        <h3>Meine Weiterbildungsorte</h3>
+        <ul class="list list--links">
+          <li><a href="https://www.mitha-moeckel.com">mitha-moeckel.com</a></li>
+          <li><a href="http://www.mithasonntag.de">mithasonntag.de</a></li>
+          <li><a href="http://www.scco.ac">scco.ac</a></li>
+          <li><a href="https://www.qualitative-visceral-osteopathy.com">qualitative-visceral-osteopathy.com</a></li>
+          <li><a href="https://www.paramed.ch/akademie/">paramed.ch/akademie</a></li>
+        </ul>
+      </div>
+
+      <div class="links-col">
+        <h3>Medizinische Qualitätsregister</h3>
+        <ul class="list list--links">
+          <li><a href="https://www.emr.ch">emr.ch</a></li>
+          <li><a href="https://www.asca.ch">asca.ch</a></li>
+          <li><a href="https://www.stiftung-sne.ch">stiftung-sne.ch</a></li>
+        </ul>
+
+        <h3>Berufskollegen / Praxen</h3>
+        <ul class="list list--links">
+          <li><a href="https://www.praxis-beweggrund.ch">praxis-beweggrund.ch</a></li>
+          <li><a href="https://www.mueller-osteopathie.ch">mueller-osteopathie.ch</a></li>
+        </ul>
+      </div>
+
+      <div class="links-col">
+        <h3>Informationen / Interessantes</h3>
+        <ul class="list list--links">
+          <li><a href="https://www1.wdr.de/mediathek/video/sendungen/quarks-und-co/video-thema-faszien-100.html">Quarks &amp; Co – Thema Faszien (Video-Beitrag)</a></li>
+          <li><a href="https://www.fasciaresearch.de">Fascia Research Group der Uni Ulm</a></li>
+        </ul>
+
+        <h3>Freunde</h3>
+        <ul class="list list--links">
+          <li><a href="https://www.wortbild-vieli.ch">wortbild-vieli.ch</a></li>
+          <li><a href="https://www.cmsbox.com">cmsbox.com</a></li>
+          <li><a href="https://www.stefanschlumpf.com">stefanschlumpf.com</a></li>
+          <li><a href="https://www.photo.li">photo.li</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="cta-row">
+      <a class="btn-link" href="#home">Zurück nach oben</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer" aria-label="Abschluss">
+  <div class="container">
+    <p>&copy; <span id="year"></span> Praxis Ildo Fisch – Naturheilkunde &amp; Osteopathie. Alle Rechte vorbehalten.</p>
+  </div>
+</footer>
+
+<script>
+  (function(){ try { document.getElementById('year').textContent = new Date().getFullYear(); } catch(e){} })();
+</script>
+<script src="app.js"></script>
+</body>
+</html>
+
