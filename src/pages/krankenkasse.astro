@@ -1,0 +1,73 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Krankenkasse / Tarife – BEWEGGRUND."
+  description="Kosten und Tarife der Osteopathie-Praxis BEWEGGRUND. in Triesenberg. Zusatzversicherung VVG, keine Überweisung erforderlich."
+>
+
+  <!-- ─── Page Header ───────────────────────── -->
+  <div class="page-header">
+    <div class="container">
+      <span class="eyebrow">BEWEGGRUND.</span>
+      <h1>Krankenkasse / Tarife</h1>
+      <span class="rule rule--center"></span>
+    </div>
+  </div>
+
+  <!-- ─── Content ──────────────────────────── -->
+  <section style="padding: var(--s16) 0 var(--s24);">
+    <div class="container container--narrow">
+
+      <!-- Krankenkasse Text -->
+      <p>
+        Die Kosten meiner Behandlung werden, im Rahmen Ihrer Zusatzversicherung (VVG), von Ihrer
+        Krankenkasse mitgetragen. Hierzu benötigen Sie eine Zusatzversicherung, die eine
+        Kostenübernahme bei „Alternativ- oder Komplementärmedizin" beinhaltet. Sie brauchen keine
+        Verordnung oder Überweisung. Bezüglich Kostendeckung bitte ich Sie um Rücksprache mit Ihrer
+        Krankenkasse. In der Regel handelt es sich um eine Übernahme von 75%.
+      </p>
+
+      <!-- Tarife -->
+      <div style="margin-top: var(--s16);">
+        <span class="eyebrow">Tarife</span>
+        <span class="rule"></span>
+
+        <div class="tarife-grid">
+
+          <div class="tarif-card">
+            <span class="tarif-duration">60 Minuten</span>
+            <span class="tarif-price">150.—</span>
+            <span class="tarif-currency">Schweizer Franken</span>
+          </div>
+
+          <div class="tarif-card">
+            <span class="tarif-duration">45 Minuten</span>
+            <span class="tarif-price">120.—</span>
+            <span class="tarif-currency">Schweizer Franken</span>
+          </div>
+
+          <div class="tarif-card">
+            <span class="tarif-duration">30 Minuten</span>
+            <span class="tarif-price">90.—</span>
+            <span class="tarif-currency">Schweizer Franken</span>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Contact note -->
+      <p style="color: var(--text-muted); margin-top: var(--s8);">
+        Bei Fragen stehe ich Ihnen gerne telefonisch oder per E-Mail zur Verfügung.
+      </p>
+
+      <div style="display: flex; gap: var(--s6); flex-wrap: wrap; margin-top: var(--s6);">
+        <a href="tel:+4239011112" class="text-link">00423 390 11 12</a>
+        <a href="mailto:ildo.fisch@beweggrund.li" class="text-link">ildo.fisch@beweggrund.li</a>
+      </div>
+
+    </div>
+  </section>
+
+</BaseLayout>

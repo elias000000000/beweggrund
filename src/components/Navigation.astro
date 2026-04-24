@@ -1,0 +1,80 @@
+---
+interface Props {
+  currentPath: string;
+}
+
+const { currentPath } = Astro.props;
+
+const navItems = [
+  { label: 'Meine Arbeit',       href: '/' },
+  { label: 'Curriculum Vitae',   href: '/cv' },
+  { label: 'Krankenkasse/Tarife', href: '/krankenkasse' },
+  { label: 'Lage',               href: '/lage' },
+  { label: 'Kontakt',            href: '/kontakt' },
+  { label: 'Links',              href: '/links' },
+];
+
+function isActive(href: string): boolean {
+  if (href === '/') return currentPath === '/' || currentPath === '';
+  return currentPath.startsWith(href);
+}
+---
+
+<nav class="nav" id="site-nav" role="navigation" aria-label="Hauptnavigation">
+  <div class="nav__inner">
+    <a href="/" class="site-logo" aria-label="BEWEGGRUND. – zur Startseite">
+      <span class="logo-beweg">BEWEG</span><span class="logo-grund">GRUND.</span>
+    </a>
+
+    <button
+      class="nav__toggle"
+      id="nav-toggle"
+      aria-label="Navigation öffnen"
+      aria-expanded="false"
+      aria-controls="nav-links"
+    >
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </button>
+
+    <ul class="nav__links" id="nav-links" role="list">
+      {navItems.map(item => (
+        <li>
+          <a
+            href={item.href}
+            aria-current={isActive(item.href) ? 'page' : undefined}
+          >
+            {item.label}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+</nav>
+
+<script>
+  const toggle = document.getElementById('nav-toggle') as HTMLButtonElement;
+  const links  = document.getElementById('nav-links')  as HTMLElement;
+  const nav    = document.getElementById('site-nav')   as HTMLElement;
+
+  // Mobile toggle
+  toggle?.addEventListener('click', () => {
+    const isOpen = links.classList.contains('is-open');
+    links.classList.toggle('is-open', !isOpen);
+    toggle.setAttribute('aria-expanded', String(!isOpen));
+  });
+
+  // Close on outside click
+  document.addEventListener('click', (e) => {
+    if (!nav.contains(e.target as Node)) {
+      links.classList.remove('is-open');
+      toggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  // Shadow on scroll
+  const onScroll = () => nav.classList.toggle('is-scrolled', window.scrollY > 8);
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+</script>

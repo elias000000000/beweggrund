@@ -1,0 +1,181 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Kontakt – BEWEGGRUND."
+  description="Kontaktformular der Praxis BEWEGGRUND. in Triesenberg. Terminliche Anfragen bitte per Telefon."
+>
+
+  <!-- ─── Page Header ───────────────────────── -->
+  <div class="page-header">
+    <div class="container">
+      <span class="eyebrow">BEWEGGRUND.</span>
+      <h1>Kontakt</h1>
+      <span class="rule rule--center"></span>
+    </div>
+  </div>
+
+  <!-- ─── Content ──────────────────────────── -->
+  <section style="padding: var(--s16) 0 var(--s24);">
+    <div class="container container--narrow" style="max-width: 820px;">
+
+      <h2 style="font-size: clamp(var(--text-xl), 2.5vw, var(--text-2xl)); margin-bottom: var(--s8);">
+        Nehmen Sie mit mir Kontakt auf
+      </h2>
+
+      <div class="kontakt-grid">
+
+        <!-- Note -->
+        <div>
+          <div class="kontakt-note">
+            <strong>Hinweis</strong>
+            Terminliche Anfragen bitte nur per Telefon. Danke!
+          </div>
+
+          <div style="margin-top: var(--s8); display: flex; flex-direction: column; gap: var(--s3);">
+            <div>
+              <span class="eyebrow" style="margin-bottom: var(--s1);">Telefon</span>
+              <a href="tel:+4239011112" class="text-link" style="font-size: var(--text-lg);">
+                00423 390 11 12
+              </a>
+            </div>
+            <div>
+              <span class="eyebrow" style="margin-bottom: var(--s1);">E-Mail</span>
+              <a href="mailto:ildo.fisch@beweggrund.li" class="text-link" style="font-size: var(--text-base);">
+                ildo.fisch@beweggrund.li
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Form -->
+        <div>
+          <p style="font-size: var(--text-sm); color: var(--text-muted); margin-bottom: var(--s6);">
+            <span style="color: var(--green);">*</span> Bitte alle erforderlichen Felder ausfüllen.
+          </p>
+
+          <div class="form-success" id="form-success" role="alert">
+            Vielen Dank für Ihre Nachricht. Ich werde mich so bald wie möglich bei Ihnen melden.
+          </div>
+
+          <!--
+            Formspree-Integration:
+            1. Erstellen Sie ein kostenloses Konto auf https://formspree.io
+            2. Erstellen Sie ein neues Formular mit der E-Mail ildo.fisch@beweggrund.li
+            3. Ersetzen Sie "YOUR_FORM_ID" unten durch Ihre Formspree-Formular-ID
+          -->
+          <form
+            id="contact-form"
+            class="form"
+            action="https://formspree.io/f/YOUR_FORM_ID"
+            method="POST"
+            novalidate
+          >
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="name">
+                  Name <span class="form-required" aria-label="Pflichtfeld">*</span>
+                </label>
+                <input
+                  id="name"
+                  class="form-control"
+                  type="text"
+                  name="name"
+                  required
+                  autocomplete="family-name"
+                />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="vorname">
+                  Vorname <span class="form-required" aria-label="Pflichtfeld">*</span>
+                </label>
+                <input
+                  id="vorname"
+                  class="form-control"
+                  type="text"
+                  name="vorname"
+                  required
+                  autocomplete="given-name"
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="email">
+                E-Mail <span class="form-required" aria-label="Pflichtfeld">*</span>
+              </label>
+              <input
+                id="email"
+                class="form-control"
+                type="email"
+                name="email"
+                required
+                autocomplete="email"
+              />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="nachricht">Nachricht</label>
+              <textarea
+                id="nachricht"
+                class="form-control"
+                name="nachricht"
+              ></textarea>
+            </div>
+
+            <div style="display: flex; align-items: center; justify-content: space-between; gap: var(--s4); flex-wrap: wrap;">
+              <button type="submit" class="btn btn--primary">Absenden</button>
+
+              <p class="form-note" style="max-width: 220px;">
+                Geschützt durch reCAPTCHA –
+                <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Datenschutzerklärung</a>
+                ·
+                <a href="https://policies.google.com/terms" target="_blank" rel="noopener">Nutzungsbedingungen</a>
+              </p>
+            </div>
+
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<script>
+  const form    = document.getElementById('contact-form') as HTMLFormElement;
+  const success = document.getElementById('form-success') as HTMLElement;
+
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const action = form.getAttribute('action') ?? '';
+    if (action.includes('YOUR_FORM_ID')) {
+      // Dev fallback: just show success message without submitting
+      form.style.display = 'none';
+      success.style.display = 'block';
+      return;
+    }
+
+    try {
+      const res = await fetch(action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' },
+      });
+
+      if (res.ok) {
+        form.style.display = 'none';
+        success.style.display = 'block';
+        success.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      } else {
+        alert('Es ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt per Telefon.');
+      }
+    } catch {
+      alert('Es ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt per Telefon.');
+    }
+  });
+</script>

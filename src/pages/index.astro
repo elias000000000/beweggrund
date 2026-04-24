@@ -1,0 +1,84 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="BEWEGGRUND. – Praxis für Naturheilkunde und Osteopathie, Triesenberg">
+
+  <!-- ─── Hero ─────────────────────────────── -->
+  <section class="hero" aria-label="Hero">
+    <img
+      src="/images/forest.jpg"
+      alt="Herbstwald mit warmem Lichteinfall – Sinnbild für Natur und Heilung"
+      class="hero__img"
+      loading="eager"
+      fetchpriority="high"
+    />
+    <div class="hero__overlay" aria-hidden="true"></div>
+
+    <div class="hero__content">
+      <div class="hero__wordmark" aria-hidden="true">
+        <span class="hero__beweg">BEWEG</span><span class="hero__grund">GRUND.</span>
+      </div>
+      <p class="hero__tagline">
+        Naturheilkunde
+        <span class="hero__dot" aria-hidden="true"></span>
+        Osteopathie
+        <span class="hero__dot" aria-hidden="true"></span>
+        Triesenberg
+      </p>
+    </div>
+
+    <div class="hero__scroll" aria-hidden="true">
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ─── Welcome ──────────────────────────── -->
+  <section class="welcome">
+    <div class="welcome__inner">
+      <span class="eyebrow">Willkommen</span>
+      <h1>Herzlich willkommen bei BEWEGGRUND.</h1>
+      <span class="rule" style="margin-top: var(--s4); margin-bottom: var(--s6);"></span>
+      <p class="welcome__lead">
+        Die Praxis für Naturheilkunde und Osteopathie in Triesenberg, Liechtenstein.
+      </p>
+      <p class="welcome__body">
+        Mein Anspruch ist eine individuell angepasste und qualitativ nachhaltige Arbeit
+        für Ihre Gesundheit zu leisten. Zu meinem Angebot gehört die komplementär
+        therapeutische Befunderhebung, Beratung und eine professionelle Behandlung.
+      </p>
+    </div>
+  </section>
+
+  <!-- ─── Flowers Band ─────────────────────── -->
+  <div class="img-band" style="height: 200px;" aria-hidden="true">
+    <img
+      src="/images/flowers.jpg"
+      alt=""
+      class="img-band__img"
+      loading="lazy"
+      style="object-position: center 60%;"
+    />
+  </div>
+
+  <!-- ─── Location Band ────────────────────── -->
+  <div class="img-band" style="height: 300px;">
+    <img
+      src="/images/village.jpg"
+      alt="Triesenberg, Liechtenstein"
+      class="img-band__img"
+      loading="lazy"
+    />
+    <div class="img-band__overlay">
+      <div class="img-band__text">
+        <div>Bergstrasse 3 &nbsp;·&nbsp; FL-9497 Triesenberg, Liechtenstein</div>
+        <div>
+          <a href="tel:+4239011112">00423 390 11 12</a>
+          &nbsp;&nbsp;·&nbsp;&nbsp;
+          <a href="mailto:ildo.fisch@beweggrund.li">ildo.fisch@beweggrund.li</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</BaseLayout>

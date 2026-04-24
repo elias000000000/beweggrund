@@ -1,0 +1,46 @@
+---
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const {
+  title,
+  description = 'Praxis für Naturheilkunde und Osteopathie in Triesenberg, Liechtenstein. Ildo Fisch – dipl. Osteopath und dipl. Naturheilpraktiker TEN.',
+} = Astro.props;
+
+const currentPath = Astro.url.pathname;
+---
+
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={new URL(currentPath, Astro.site)} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Font preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Cormorant Garamond (display) + Lato (body/nav) -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Lato:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <Navigation currentPath={currentPath} />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

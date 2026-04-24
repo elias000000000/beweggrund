@@ -1,0 +1,84 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Lage – BEWEGGRUND."
+  description="Lage und Anfahrt zur Praxis BEWEGGRUND. von Ildo Fisch, Bergstrasse 3, FL-9497 Triesenberg, Liechtenstein."
+>
+
+  <!-- ─── Page Header ───────────────────────── -->
+  <div class="page-header">
+    <div class="container">
+      <span class="eyebrow">BEWEGGRUND.</span>
+      <h1>Lage</h1>
+      <span class="rule rule--center"></span>
+    </div>
+  </div>
+
+  <!-- ─── Village Image ────────────────────── -->
+  <div class="img-band lage-hero">
+    <img
+      src="/images/village.jpg"
+      alt="Triesenberg, Liechtenstein – Rathaus und Dorfzentrum"
+      class="img-band__img"
+      loading="lazy"
+      style="object-position: center 35%;"
+    />
+    <div class="img-band__overlay" style="background: rgba(0,0,0,0.22);"></div>
+  </div>
+
+  <!-- ─── Address + Map ────────────────────── -->
+  <section style="padding: var(--s12) 0 var(--s24);">
+    <div class="container">
+
+      <div style="display: grid; grid-template-columns: 260px 1fr; gap: var(--s10) var(--s12); align-items: start;">
+
+        <!-- Address -->
+        <div>
+          <p style="color: var(--text-muted); margin-bottom: var(--s6);">Hier finden Sie mich:</p>
+          <address class="address-card">
+            <span class="eyebrow" style="margin-bottom: var(--s3);">Praxisadresse</span>
+            <address style="font-style: normal; font-size: var(--text-lg); line-height: 1.8; color: var(--text);">
+              BEWEGGRUND.<br />
+              Ildo Fisch<br />
+              Bergstrasse 3<br />
+              FL-9497 Triesenberg<br />
+              Liechtenstein
+            </address>
+
+            <div style="margin-top: var(--s6); display: flex; flex-direction: column; gap: var(--s2);">
+              <a href="tel:+4239011112" class="text-link" style="font-size: var(--text-base);">
+                00423 390 11 12
+              </a>
+              <a href="mailto:ildo.fisch@beweggrund.li" class="text-link" style="font-size: var(--text-base);">
+                ildo.fisch@beweggrund.li
+              </a>
+            </div>
+          </address>
+        </div>
+
+        <!-- Map -->
+        <div class="map-wrap">
+          <iframe
+            title="Lage der Praxis BEWEGGRUND. in Triesenberg"
+            src="https://maps.google.com/maps?q=Bergstrasse+3,+9497+Triesenberg,+Liechtenstein&t=m&z=16&output=embed&iwloc=near"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen
+          ></iframe>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  @media (max-width: 700px) {
+    section > .container > div {
+      grid-template-columns: 1fr !important;
+    }
+  }
+</style>
