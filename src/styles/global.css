@@ -193,12 +193,19 @@ a.text-link:hover { color: var(--green-dark); }
 /* Logo */
 .site-logo {
   display: flex;
-  align-items: baseline;
-  gap: 0;
+  align-items: center;
   flex-shrink: 0;
   line-height: 1;
 }
 
+.site-logo-img {
+  height: 36px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* CSS-Fallback (Footer, falls SVG fehlt) */
 .logo-beweg,
 .logo-grund {
   font-family: var(--font-body);
@@ -373,8 +380,8 @@ a.text-link:hover { color: var(--green-dark); }
   inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 0.12) 0%,
-    rgba(0, 0, 0, 0.50) 100%
+    rgba(0, 0, 0, 0.18) 0%,
+    rgba(0, 0, 0, 0.62) 100%
   );
 }
 
@@ -399,27 +406,29 @@ a.text-link:hover { color: var(--green-dark); }
 
 .hero__beweg,
 .hero__grund {
-  font-family: var(--font-body);
+  font-family: 'Josefin Sans', var(--font-body);
   font-size: clamp(1.75rem, 5vw, 3.25rem);
-  font-weight: 300;
-  letter-spacing: 0.25em;
+  font-weight: 400;
+  letter-spacing: 0.28em;
+  text-shadow: 0 2px 28px rgba(0,0,0,0.65);
 }
 
-.hero__beweg { color: rgba(255,255,255,0.96); }
+.hero__beweg { color: rgba(255,255,255,0.97); }
 
 .hero__grund {
-  color: rgba(255,255,255,0.65);
+  color: rgba(255,255,255,0.78);
   display: inline-block;
   transform: scaleX(-1);
 }
 
 .hero__tagline {
-  font-family: var(--font-body);
+  font-family: 'Josefin Sans', var(--font-body);
   font-size: clamp(var(--text-xs), 2vw, var(--text-sm));
-  font-weight: 300;
-  letter-spacing: 0.16em;
+  font-weight: 400;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.80);
+  color: rgba(255,255,255,0.90);
+  text-shadow: 0 1px 12px rgba(0,0,0,0.5);
 }
 
 .hero__dot {
