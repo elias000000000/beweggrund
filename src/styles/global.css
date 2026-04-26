@@ -257,6 +257,20 @@ a.text-link:hover { color: var(--green-dark); }
   border-bottom-color: var(--green);
 }
 
+/* Light nav variant (hero/landing page) */
+.nav--light .nav__links a {
+  color: rgba(255,255,255,0.88);
+  border-bottom-color: transparent;
+}
+.nav--light .nav__links a:hover,
+.nav--light .nav__links a[aria-current="page"] {
+  color: white;
+  border-bottom-color: rgba(255,255,255,0.5);
+}
+.nav--light .nav__toggle span {
+  background: white;
+}
+
 /* Mobile toggle */
 .nav__toggle {
   display: none;
@@ -400,8 +414,9 @@ a.text-link:hover { color: var(--green-dark); }
   inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(0,0,0,0.48) 0%,
-    rgba(0,0,0,0.82) 100%
+    rgba(0,0,0,0.78) 0%,
+    rgba(0,0,0,0.30) 42%,
+    rgba(0,0,0,0) 68%
   );
 }
 

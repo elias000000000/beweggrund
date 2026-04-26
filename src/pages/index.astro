@@ -2,7 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="beweggrund. – Naturheilkunde & Osteopathie, Triesenberg">
+<BaseLayout title="beweggrund. – Naturheilkunde & Osteopathie, Triesenberg" lightNav={true}>
 
   <!-- ─── Hero ─────────────────────────────── -->
   <section class="hero" aria-label="Hero" data-slideshow>
@@ -83,19 +83,3 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   </div>
 
 </BaseLayout>
-
-<style is:global>
-  /* White nav links only on the hero/landing page */
-  .nav__links a {
-    color: rgba(255, 255, 255, 0.88);
-    border-bottom-color: transparent;
-  }
-  .nav__links a:hover,
-  .nav__links a[aria-current="page"] {
-    color: white;
-    border-bottom-color: rgba(255, 255, 255, 0.55);
-  }
-  .nav__toggle span {
-    background: white;
-  }
-</style>

@@ -1,9 +1,10 @@
 ---
 interface Props {
   currentPath: string;
+  lightNav?: boolean;
 }
 
-const { currentPath } = Astro.props;
+const { currentPath, lightNav = false } = Astro.props;
 
 const navItems = [
   { label: 'Meine Arbeit',       href: '/' },
@@ -20,7 +21,7 @@ function isActive(href: string): boolean {
 }
 ---
 
-<nav class="nav" id="site-nav" role="navigation" aria-label="Hauptnavigation">
+<nav class={`nav${lightNav ? ' nav--light' : ''}`} id="site-nav" role="navigation" aria-label="Hauptnavigation">
   <div class="nav__inner">
     <a href="/" class="site-logo" aria-label="BEWEGGRUND. – zur Startseite">
       <img
