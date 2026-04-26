@@ -194,6 +194,7 @@ a.text-link:hover { color: var(--green-dark); }
   height: 100%;
   margin-inline: auto;
   padding-inline: var(--s6);
+  padding-top: 6px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -424,12 +425,19 @@ a.text-link:hover { color: var(--green-dark); }
   position: relative;
   z-index: 1;
   text-align: center;
-  padding-inline: var(--s8);
+  padding: var(--s8) var(--s12);
   color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: var(--s4);
+  background: rgba(0,0,0,0.68);
+  border-radius: 1.25rem;
+}
+
+.hero__logo-img {
+  width: clamp(160px, 30vw, 300px);
+  height: auto;
 }
 
 .hero__wordmark {
