@@ -425,13 +425,21 @@ a.text-link:hover { color: var(--green-dark); }
   position: relative;
   z-index: 1;
   text-align: center;
-  padding: var(--s12) var(--s16);
+  padding: var(--s8) var(--s10);
   color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: var(--s4);
-  background: radial-gradient(ellipse at center, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0) 72%);
+}
+
+.hero__content::before {
+  content: '';
+  position: absolute;
+  inset: -100%;
+  background: radial-gradient(ellipse at center, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0) 55%);
+  z-index: -1;
+  pointer-events: none;
 }
 
 .hero__logo-img {
