@@ -391,9 +391,9 @@ a.text-link:hover { color: var(--green-dark); }
 /* ─── Hero (Home) ────────────────────────── */
 .hero {
   position: relative;
-  height: calc(100vh - var(--nav-h));
+  height: 100vh;
+  height: 100dvh;
   min-height: 520px;
-  max-height: 900px;
   overflow: hidden;
   display: flex;
   align-items: center;
