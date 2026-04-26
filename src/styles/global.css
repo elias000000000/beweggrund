@@ -21,7 +21,7 @@
   --border-subtle: #EDE8DF;
 
   /* Typography */
-  --font-display:  'Cormorant Garamond', 'Georgia', serif;
+  --font-display:  'Lato', system-ui, -apple-system, sans-serif;
   --font-body:     'Lato', system-ui, -apple-system, sans-serif;
 
   /* Type Scale */
@@ -105,16 +105,16 @@ body::before {
 
 /* ─── Typography ─────────────────────────── */
 h1, h2, h3, h4, h5 {
-  font-family: var(--font-display);
-  font-weight: 300;
+  font-family: var(--font-body);
+  font-weight: 700;
   line-height: 1.2;
   color: var(--text);
 }
 
-h1 { font-size: clamp(var(--text-3xl), 5vw, var(--text-5xl)); letter-spacing: -0.01em; }
-h2 { font-size: clamp(var(--text-2xl), 3.5vw, var(--text-4xl)); }
-h3 { font-size: clamp(var(--text-xl), 2vw, var(--text-2xl)); font-weight: 400; }
-h4 { font-size: var(--text-lg); font-weight: 400; }
+h1 { font-size: clamp(var(--text-2xl), 4vw, var(--text-4xl)); letter-spacing: -0.01em; }
+h2 { font-size: clamp(var(--text-xl), 3vw, var(--text-3xl)); }
+h3 { font-size: clamp(var(--text-lg), 2vw, var(--text-xl)); font-weight: 700; }
+h4 { font-size: var(--text-lg); font-weight: 700; }
 
 p + p { margin-top: var(--s4); }
 
@@ -168,12 +168,12 @@ a.text-link:hover { color: var(--green-dark); }
 .page-header {
   padding: var(--s16) 0 var(--s10);
   text-align: center;
-  background: var(--bg);
-  border-bottom: 1px solid var(--border-subtle);
+  background: transparent;
 }
 
 .page-header h1 {
-  font-size: clamp(var(--text-3xl), 4vw, var(--text-4xl));
+  font-size: clamp(var(--text-2xl), 3.5vw, var(--text-4xl));
+  font-weight: 700;
 }
 
 /* ─── Navigation ─────────────────────────── */
@@ -182,7 +182,7 @@ a.text-link:hover { color: var(--green-dark); }
   top: 0;
   z-index: 100;
   height: var(--nav-h);
-  background: var(--surface);
+  background: var(--bg);
   border-bottom: 1px solid var(--border-subtle);
   transition: box-shadow var(--transition);
 }
@@ -325,7 +325,7 @@ a.text-link:hover { color: var(--green-dark); }
 }
 
 .footer__inner {
-  max-width: var(--max-w);
+  max-width: 760px;
   margin-inline: auto;
   padding-inline: var(--s6);
   display: grid;
@@ -745,11 +745,11 @@ a.text-link:hover { color: var(--green-dark); }
 .tarif-price {
   display: block;
   font-family: var(--font-body);
-  font-size: var(--text-4xl);
+  font-size: var(--text-3xl);
   font-weight: 300;
   color: var(--green);
-  letter-spacing: -0.02em;
-  line-height: 1;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
 }
 
 .tarif-currency {

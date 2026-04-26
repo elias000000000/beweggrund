@@ -57,11 +57,17 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   </section>
 
   <!-- ─── Location Band ────────────────────── -->
-  <div class="img-band" style="height: 300px;">
+  <div class="img-band" style="height: 300px;" data-slideshow>
     <img
-      src="/images/village.jpg"
+      src="/images/lage.jpg"
       alt="Triesenberg, Liechtenstein"
-      class="img-band__img"
+      class="img-band__img img-slide is-active"
+      loading="lazy"
+    />
+    <img
+      src="/images/lage2.jpg"
+      alt="Triesenberg, Liechtenstein – Bergpanorama"
+      class="img-band__img img-slide"
       loading="lazy"
     />
     <div class="img-band__overlay" style="background: rgba(0,0,0,0.52);">
