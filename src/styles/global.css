@@ -425,14 +425,13 @@ a.text-link:hover { color: var(--green-dark); }
   position: relative;
   z-index: 1;
   text-align: center;
-  padding: var(--s8) var(--s12);
+  padding: var(--s12) var(--s16);
   color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: var(--s4);
-  background: linear-gradient(to bottom, rgba(0,0,0,0.74) 0%, rgba(0,0,0,0.38) 100%);
-  border-radius: 1.25rem;
+  background: radial-gradient(ellipse at center, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0) 72%);
 }
 
 .hero__logo-img {
