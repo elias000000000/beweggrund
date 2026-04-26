@@ -21,7 +21,7 @@
   --border-subtle: #EDE8DF;
 
   /* Typography */
-  --font-display:  'Lato', system-ui, -apple-system, sans-serif;
+  --font-display:  'Playfair Display', 'Georgia', serif;
   --font-body:     'Lato', system-ui, -apple-system, sans-serif;
 
   /* Type Scale */
@@ -105,16 +105,17 @@ body::before {
 
 /* ─── Typography ─────────────────────────── */
 h1, h2, h3, h4, h5 {
-  font-family: var(--font-body);
-  font-weight: 700;
+  font-family: var(--font-display);
+  font-weight: 400;
   line-height: 1.2;
   color: var(--text);
+  letter-spacing: 0.04em;
 }
 
-h1 { font-size: clamp(var(--text-2xl), 4vw, var(--text-4xl)); letter-spacing: -0.01em; }
+h1 { font-size: clamp(var(--text-2xl), 4vw, var(--text-4xl)); }
 h2 { font-size: clamp(var(--text-xl), 3vw, var(--text-3xl)); }
-h3 { font-size: clamp(var(--text-lg), 2vw, var(--text-xl)); font-weight: 700; }
-h4 { font-size: var(--text-lg); font-weight: 700; }
+h3 { font-size: clamp(var(--text-lg), 2vw, var(--text-xl)); }
+h4 { font-size: var(--text-lg); }
 
 p + p { margin-top: var(--s4); }
 
@@ -166,29 +167,26 @@ a.text-link:hover { color: var(--green-dark); }
 
 /* ─── Page Header (inner pages) ──────────── */
 .page-header {
-  padding: var(--s16) 0 var(--s10);
+  padding: calc(var(--nav-h) + var(--s12)) 0 var(--s10);
   text-align: center;
   background: transparent;
 }
 
 .page-header h1 {
   font-size: clamp(var(--text-2xl), 3.5vw, var(--text-4xl));
-  font-weight: 700;
+  font-weight: 400;
+  letter-spacing: 0.06em;
 }
 
 /* ─── Navigation ─────────────────────────── */
 .nav {
-  position: sticky;
+  position: absolute;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 100;
   height: var(--nav-h);
-  background: var(--bg);
-  border-bottom: 1px solid var(--border-subtle);
-  transition: box-shadow var(--transition);
-}
-
-.nav.is-scrolled {
-  box-shadow: var(--shadow-sm);
+  background: transparent;
 }
 
 .nav__inner {
@@ -289,7 +287,7 @@ a.text-link:hover { color: var(--green-dark); }
     flex-direction: column;
     align-items: stretch;
     gap: 0;
-    background: var(--surface);
+    background: var(--bg);
     border-bottom: 1px solid var(--border);
     box-shadow: var(--shadow);
     padding-block: var(--s3);
@@ -319,13 +317,13 @@ a.text-link:hover { color: var(--green-dark); }
 .footer {
   background: #272827;
   color: #8C8C8C;
-  padding: var(--s12) 0;
+  padding: var(--s6) 0;
   font-size: var(--text-sm);
   line-height: 1.7;
 }
 
 .footer__inner {
-  max-width: 760px;
+  max-width: var(--max-w);
   margin-inline: auto;
   padding-inline: var(--s6);
   display: grid;
@@ -406,11 +404,9 @@ a.text-link:hover { color: var(--green-dark); }
 .hero__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.18) 0%,
-    rgba(0, 0, 0, 0.62) 100%
-  );
+  background:
+    linear-gradient(to bottom, rgba(255,255,255,0.60) 0%, rgba(255,255,255,0) 18%),
+    linear-gradient(to bottom, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.62) 100%);
 }
 
 .hero__content {
