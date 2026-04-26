@@ -2,16 +2,22 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="BEWEGGRUND. – Praxis für Naturheilkunde und Osteopathie, Triesenberg">
+<BaseLayout title="beweggrund. – Naturheilkunde & Osteopathie, Triesenberg">
 
   <!-- ─── Hero ─────────────────────────────── -->
-  <section class="hero" aria-label="Hero">
+  <section class="hero" aria-label="Hero" data-slideshow>
     <img
       src="/images/forest.jpg"
       alt="Herbstwald mit warmem Lichteinfall – Sinnbild für Natur und Heilung"
-      class="hero__img"
+      class="hero__img img-slide is-active"
       loading="eager"
       fetchpriority="high"
+    />
+    <img
+      src="/images/forest2.jpg"
+      alt="Herbstwald – Natur und Stille"
+      class="hero__img img-slide"
+      loading="lazy"
     />
     <div class="hero__overlay" aria-hidden="true"></div>
 

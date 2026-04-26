@@ -3,7 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout
-  title="Lage – BEWEGGRUND."
+  title="Lage – beweggrund."
   description="Lage und Anfahrt zur Praxis BEWEGGRUND. von Ildo Fisch, Bergstrasse 3, FL-9497 Triesenberg, Liechtenstein."
 >
 
@@ -16,16 +16,23 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </div>
 
-  <!-- ─── Village Image ────────────────────── -->
-  <div class="img-band lage-hero">
+  <!-- ─── Village Image Slideshow ──────────── -->
+  <div class="img-band lage-hero" data-slideshow>
     <img
-      src="/images/village.jpg"
+      src="/images/lage.jpg"
       alt="Triesenberg, Liechtenstein – Rathaus und Dorfzentrum"
-      class="img-band__img"
+      class="img-band__img img-slide is-active"
       loading="lazy"
       style="object-position: center 35%;"
     />
-    <div class="img-band__overlay" style="background: rgba(0,0,0,0.22);"></div>
+    <img
+      src="/images/lage2.jpg"
+      alt="Triesenberg, Liechtenstein – Bergpanorama"
+      class="img-band__img img-slide"
+      loading="lazy"
+      style="object-position: center 35%;"
+    />
+    <div class="img-band__overlay" style="background: rgba(0,0,0,0.22);" aria-hidden="true"></div>
   </div>
 
   <!-- ─── Address + Map ────────────────────── -->

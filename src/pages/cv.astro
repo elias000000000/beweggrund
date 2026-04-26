@@ -3,7 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout
-  title="Curriculum Vitae – BEWEGGRUND."
+  title="Curriculum Vitae – beweggrund."
   description="Ausbildung und beruflicher Werdegang von Ildo Fisch, dipl. Osteopath und dipl. Naturheilpraktiker TEN, Praxis BEWEGGRUND. in Triesenberg."
 >
 
@@ -14,6 +14,25 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <h1>Curriculum Vitae</h1>
       <span class="rule rule--center"></span>
     </div>
+  </div>
+
+  <!-- ─── Book Image Slideshow ─────────────── -->
+  <div class="img-band" style="height: 280px;" data-slideshow>
+    <img
+      src="/images/buch.jpg"
+      alt="Osteopathie-Bücher im Bücherregal der Praxis BEWEGGRUND."
+      class="img-band__img img-slide is-active"
+      loading="lazy"
+      style="object-position: center 30%;"
+    />
+    <img
+      src="/images/buch2.jpg"
+      alt="Historische medizinische Bücher"
+      class="img-band__img img-slide"
+      loading="lazy"
+      style="object-position: center 40%;"
+    />
+    <div class="img-band__overlay" style="background: rgba(0,0,0,0.18);" aria-hidden="true"></div>
   </div>
 
   <!-- ─── Content ──────────────────────────── -->
