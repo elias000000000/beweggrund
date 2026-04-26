@@ -59,16 +59,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             Vielen Dank für Ihre Nachricht. Ich werde mich so bald wie möglich bei Ihnen melden.
           </div>
 
-          <!--
-            Formspree-Integration:
-            1. Erstellen Sie ein kostenloses Konto auf https://formspree.io
-            2. Erstellen Sie ein neues Formular mit der E-Mail ildo.fisch@beweggrund.li
-            3. Ersetzen Sie "YOUR_FORM_ID" unten durch Ihre Formspree-Formular-ID
-          -->
           <form
             id="contact-form"
             class="form"
-            action="https://formspree.io/f/YOUR_FORM_ID"
+            action="https://formspree.io/f/myklvkne"
             method="POST"
             novalidate
           >
@@ -136,6 +130,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
               </p>
             </div>
 
+            <p style="margin-top: var(--s4); font-size: var(--text-xs); color: var(--text-muted);">
+              Mit dem Absenden stimmen Sie der Verarbeitung Ihrer Daten gemäss unserer
+              <a href="/datenschutz" class="text-link" style="font-size: inherit;">Datenschutzerklärung</a> zu.
+            </p>
+
           </form>
         </div>
 
@@ -153,12 +152,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     e.preventDefault();
 
     const action = form.getAttribute('action') ?? '';
-    if (action.includes('YOUR_FORM_ID')) {
-      // Dev fallback: just show success message without submitting
-      form.style.display = 'none';
-      success.style.display = 'block';
-      return;
-    }
 
     try {
       const res = await fetch(action, {
